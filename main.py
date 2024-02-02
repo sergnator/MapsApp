@@ -22,7 +22,7 @@ class MapWindow(QMainWindow):
         self.image.setGeometry(0, 0, *SCREEN_SIZE)
         # создание изображение
         im = create_map_image(self.params)
-        print(im.size)
+
         data = im.tobytes("raw", 'RGB')
         qim = QImage(data, im.size[0], im.size[1], QImage.Format_RGB888)
 
